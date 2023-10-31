@@ -1,0 +1,155 @@
+/* Define the variables */
+:root {
+    --background-color : #0f172a;
+}
+
+/* Apply the Google API fonts in the document */
+html {
+    font-family: 'Noto sans', sans-serif;
+}
+
+h1 {
+    font-family: 'Bungee', sans-serif;
+}
+
+/* Reset every property in order to configure it ourselves */
+* {
+    /* This means that the elements border is included in its width */
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+    transition-duration: 300ms;
+
+}
+
+body {
+    min-height: 100vh;
+    /* vh means view height */
+    background: var(--background-color);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+    
+}
+
+header,
+main,
+footer {
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    /* flex means to prioritize over the other children tags to take as much space from the parent/container as possible */
+    gap: 24px;
+    flex: 1;
+}
+
+.plusIcon {
+    font-size: 1.5rem;
+}
+
+.plusIcon:hover {
+    color: cyan;
+    cursor: pointer;
+}
+
+#enterTodo {
+    display: none;
+}
+
+#enterTodo form {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    border: 1px solid skyblue;
+}
+
+/* Just form visual effects */
+#enterTodo form:focus-within {
+    border-color: aqua;
+}
+
+#enterTodo input{
+    background: transparent;
+    outline: none;
+    padding:  12px;
+    color: white;
+    flex: 1;
+    border: none;
+    
+}
+
+#enterTodo button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: skyblue;
+    border: none;
+    outline: none;
+    padding: 0 12px;
+    color: var(--background-color);
+    font-family: 'Bungee',sans-serif;
+    cursor: pointer;
+}
+
+#enterTodo button:hover {
+    background: var(--background-color);
+    color: skyblue;
+}
+
+/* This is the styling of the todos list */
+#todos {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.todoItem {
+    display: flex;
+    align-items: center;
+}
+
+.todoItem p {
+    flex: 1;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.actions i:hover {
+    color: coral;
+}
+
+/* Footer styling */
+footer {
+    display: grid;
+    place-items: center;
+}
+
+footer a {
+    color: inherit;
+}
+
+footer i {
+    cursor: pointer;    
+}
+
+footer i:hover {
+    color: cyan;
+}
